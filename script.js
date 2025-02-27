@@ -33,16 +33,38 @@ const createGrid = function (size) {
    }
 };
 
+const reset = function () {
+   const boxes = document.querySelectorAll('.box');
+   boxes.forEach(function (box) {
+      box.classList.remove('box-hovered');
+   });
+};
+
 // Add box hover functionality
 container.addEventListener('mouseover', function (e) {
    e.target.classList.add('box-hovered');
 });
 
+// Reset Button Functionality
 resetBtn.addEventListener('click', function () {
+   reset();
+});
+
+changeBtn.addEventListener('click', function () {
+   // Get user grid value
+   let newGrid = input.value;
+
+   // Remove all old boxes
    const boxes = document.querySelectorAll('.box');
    boxes.forEach(function (box) {
-      box.classList.remove('box-hovered');
+      box.remove();
    });
+
+   // Create new grid
+   createGrid(newGrid);
+
+   // Reset User input
+   input.value = '';
 });
 
 createGrid(16);
