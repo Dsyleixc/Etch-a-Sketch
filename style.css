@@ -1,10 +1,25 @@
 body {
    background-color: #333;
    display: flex;
+   flex-direction: column;
    justify-content: center;
    align-items: center;
    height: 100vh;
    margin: 0;
+}
+
+button {
+   border-radius: 5px;
+   background-color: #fff;
+   cursor: pointer;
+   border: none;
+   height: 100%;
+   width: 100px;
+}
+
+input {
+   border-radius: 5px;
+   border: none;
 }
 
 .container {
@@ -16,6 +31,24 @@ body {
    flex-direction: row;
 }
 
-.box {
+.controls {
+   display: flex;
+   width: 600px;
+   align-items: center;
+   justify-content: center;
+   gap: 100px;
+   margin-top: 10px;
+}
+
+.grid-settings {
+   display: flex;
+   align-items: center;
+}
+
+.box-hovered {
    background-color: red;
+}
+
+.grid-size {
+   margin-right: 10px;
 }
