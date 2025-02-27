@@ -1,0 +1,21 @@
+body {
+   background-color: #333;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+}
+
+.container {
+   background-color: #fff;
+   width: 600px;
+   height: 600px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+}
+
+.box {
+   background-color: red;
+}
